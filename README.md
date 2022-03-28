@@ -8,7 +8,7 @@ From | To
 cmd right + i/j/k/l       | cursors up/left/down/right
 caps lock + qwertzuiopü   | signs from number row + shift  
 caps lock + asdf gh jklö  | numerics 1234 56  
-ctrl right + asdf g       | numerics
+cmd right + asdf gh       | numerics 1234 56  
 ctrl left + <             | cursor left
 ctrl left + space         | enter
 caps lock + space         | enter
@@ -27,6 +27,10 @@ pagedown + shift          | »«
 home + shift              | ''
 pageup + shift            | ""
 pagedown + shift          | »«
+&nbsp;                    | &nbsp;
+home + caps lock          | ``
+pageup + caps lock        | ##
+pagedown + caps lock      | <>
 &nbsp;                    | &nbsp;
 home + shift + ctrl       | app: Spotify
 pageup + shift + ctrl     | app: Terminal
