@@ -32,7 +32,7 @@ home + shift + ctrl       | app: Spotify
 pageup + shift + ctrl     | app: Terminal
 pagedown + shift + ctrl   | app: Visual Studio Code
 &nbsp;                    | &nbsp;
-home plus option left     | home
+home + option left        | home
 pageup + option left      | pageup
 pagedown + option left    | pagedown
 &nbsp;                    | &nbsp;
