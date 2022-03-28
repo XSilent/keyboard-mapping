@@ -14,7 +14,7 @@ ctrl left + space         | enter
 caps lock + space         | enter
 caps lock                 | backspace
 caps lock + z             | !
-caps lock + x             | ¯\_(ツ)_/¯
+caps lock + x             | ¯\\_(ツ)_/¯
 &nbsp;                    | &nbsp;  
 home                      | ()
 pageup                    | []
@@ -41,6 +41,7 @@ ctrl left + shift left + 2| app: Google Hangouts
 ctrl left + shift left + 3| app: Telegram 
 ctrl left + shift left + 4| app: Libre Office
 &nbsp;                    | &nbsp;
+
 
 
 Layer2
