@@ -8,3 +8,7 @@ caps lock + asdf gh jklö  --> nummerics
 
 ctrl right + asdf g       --> numerics 1234 56  
 ctrl left + <             --> cursor left  
+
+From | To 
+--- | --- 
+ctrl left + < | cursor left
