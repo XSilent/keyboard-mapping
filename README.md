@@ -24,10 +24,6 @@ home + shift              | ''
 pageup + shift            | ""
 pagedown + shift          | »«
 &nbsp;                    | &nbsp;
-home + shift              | ''
-pageup + shift            | ""
-pagedown + shift          | »«
-&nbsp;                    | &nbsp;
 home + caps lock          | ``
 pageup + caps lock        | ##
 pagedown + caps lock      | <>
