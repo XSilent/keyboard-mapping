@@ -12,7 +12,7 @@
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
                     "basic.to_if_held_down_threshold_milliseconds": 500,
-                     "mouse_motion_to_scroll.speed": 100
+                    "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
                     {
@@ -876,14 +876,14 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Home plus CAPSLOCK --> ``",
                                 "conditions": [
                                     {
                                         "name": "caps_lock pressed",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ],  
+                                ],
+                                "description": "Home plus CAPSLOCK --> ``",
                                 "from": {
                                     "key_code": "home",
                                     "modifiers": {
@@ -897,29 +897,29 @@
                                         "key_code": "equal_sign",
                                         "modifiers": [
                                             "left_shift"
-                                        ] 
+                                        ]
                                     },
                                     {
                                         "key_code": "equal_sign",
                                         "modifiers": [
                                             "left_shift"
-                                        ]                                   
+                                        ]
                                     },
                                     {
-                                        "key_code": "left_arrow"                                                              
+                                        "key_code": "left_arrow"
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
-                                "description": "PageUp plus CAPSLOCK --> ##",
                                 "conditions": [
                                     {
                                         "name": "caps_lock pressed",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ],  
+                                ],
+                                "description": "PageUp plus CAPSLOCK --> ##",
                                 "from": {
                                     "key_code": "page_up",
                                     "modifiers": {
@@ -930,26 +930,26 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "non_us_pound"                                        
+                                        "key_code": "non_us_pound"
                                     },
                                     {
-                                        "key_code": "non_us_pound"                                        
+                                        "key_code": "non_us_pound"
                                     },
                                     {
-                                        "key_code": "left_arrow"                                                              
+                                        "key_code": "left_arrow"
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
-                                "description": "PageDown plus CAPSLOCK --> <>",
                                 "conditions": [
                                     {
                                         "name": "caps_lock pressed",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ],  
+                                ],
+                                "description": "PageDown plus CAPSLOCK --> <>",
                                 "from": {
                                     "key_code": "page_down",
                                     "modifiers": {
@@ -960,20 +960,20 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "non_us_backslash"                                        
+                                        "key_code": "non_us_backslash"
                                     },
                                     {
                                         "key_code": "non_us_backslash",
                                         "modifiers": [
                                             "left_shift"
-                                        ]                                   
+                                        ]
                                     },
                                     {
-                                        "key_code": "left_arrow"                                                              
+                                        "key_code": "left_arrow"
                                     }
                                 ],
                                 "type": "basic"
-                            }                            
+                            }
                         ]
                     },
                     {
@@ -1094,7 +1094,7 @@
                                 "type": "basic"
                             }
                         ]
-                    },  
+                    },
                     {
                         "description": "Left Control plus < --> Cursor left",
                         "manipulators": [
@@ -1106,18 +1106,18 @@
                                             "left_control"
                                         ]
                                     }
-                                },   
+                                },
                                 "to": [
                                     {
                                         "key_code": "left_arrow"
                                     }
                                 ],
-                                "type": "basic"                         
+                                "type": "basic"
                             }
                         ]
-                    },      
+                    },
                     {
-                        "description": "Left Control plus SPACE --> ENTER",
+                        "description": "Left Option plus SPACE --> DELETE",
                         "manipulators": [
                             {
                                 "from": {
@@ -1127,13 +1127,16 @@
                                             "left_option"
                                         ]
                                     }
-                                },   
+                                },
                                 "to": [
                                     {
-                                        "key_code": "return_or_enter"
-                                    }
+                                        "key_code": "d",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }                                  
                                 ],
-                                "type": "basic"                         
+                                "type": "basic"
                             }
                         ]
                     },
@@ -1155,16 +1158,16 @@
                                             "any"
                                         ]
                                     }
-                                },   
+                                },
                                 "to": [
                                     {
                                         "key_code": "return_or_enter"
                                     }
                                 ],
-                                "type": "basic"                         
+                                "type": "basic"
                             }
                         ]
-                    },                            
+                    },
                     {
                         "description": "CAPS LOCK (press alone) --> BACKSPACE",
                         "manipulators": [
@@ -1213,7 +1216,7 @@
                                             "caps_lock"
                                         ]
                                     }
-                                },    
+                                },
                                 "to": [
                                     {
                                         "set_variable": {
@@ -1221,7 +1224,7 @@
                                             "value": 1
                                         }
                                     }
-                                ],        
+                                ],
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
@@ -1229,9 +1232,9 @@
                                             "value": 0
                                         }
                                     }
-                                ],       
+                                ],
                                 "to_if_alone": [
-                                    {     
+                                    {
                                         "key_code": "left_arrow"
                                     }
                                 ],
@@ -1242,14 +1245,14 @@
                     {
                         "manipulators": [
                             {
-                                "description": "CAPSLOCK plus z --> !",
                                 "conditions": [
                                     {
                                         "name": "caps_lock pressed",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ],  
+                                ],
+                                "description": "CAPSLOCK plus z --> !",
                                 "from": {
                                     "key_code": "z",
                                     "modifiers": {
@@ -1269,75 +1272,75 @@
                                 "type": "basic"
                             }
                         ]
-                    },   
+                    },
                     {
                         "manipulators": [
                             {
-                                "description": "CAPSLOCK plus z --> ¯\\_(ツ)_/¯",
                                 "conditions": [
-                                {
-                                    "name": "caps_lock pressed",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }
-                            ],  
-                            "from": {
-                                "key_code": "x",
-                                "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
-                                } 
-                            },
-                            "to": [
-                                {
-                                    "key_code": "7",
-                                    "modifiers": [
-                                        "left_shift",
-                                        "left_option"
-                                    ]
+                                    {
+                                        "name": "caps_lock pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "CAPSLOCK plus z --> ¯\\_(ツ)_/¯",
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                {
-                                    "key_code": "slash",
-                                    "modifiers": [    
-                                        "left_shift"                                        
-                                    ]
-                                },
-                                {
-                                    "key_code": "slash",
-                                    "modifiers": [    
-                                        "left_shift"                                        
-                                    ]
-                                },
-                                {
-                                    "key_code": "8",
-                                    "modifiers": [    
-                                        "left_shift"                                        
-                                    ]
-                                },
-                                {                                    
-                                    "key_code": "ツ",    
-                                    "modifiers": [    
-                                        "left_shift"                                        
-                                    ]
-                                },
-                                {
-                                    "key_code": "9",
-                                    "modifiers": [    
-                                        "left_shift"                                        
-                                    ]
-                                }
-                            ],
-                            "type": "basic"
-                        }
-                    ]
-                    },       
+                                "to": [
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_option"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "ツ",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "9",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "Home plus left Option --> Home",
                                 "from": {
-                                    "key_code": "home",  
+                                    "key_code": "home",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -1346,19 +1349,19 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "home"                                       
-                                    }                                                                              
+                                        "key_code": "home"
+                                    }
                                 ],
                                 "type": "basic"
                             }
                         ]
-                    },   
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "PageUp plus left Option --> PageUp",
                                 "from": {
-                                    "key_code": "page_up",  
+                                    "key_code": "page_up",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -1367,19 +1370,19 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "page_up"                                       
-                                    }                                                                              
+                                        "key_code": "page_up"
+                                    }
                                 ],
                                 "type": "basic"
                             }
                         ]
-                    },  
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "PageDown plus left Option --> PageDown",
                                 "from": {
-                                    "key_code": "page_down",  
+                                    "key_code": "page_down",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -1388,19 +1391,19 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "page_down"                                       
-                                    }                                                                              
+                                        "key_code": "page_down"
+                                    }
                                 ],
                                 "type": "basic"
                             }
                         ]
-                    }, 
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "Home plus Shift --> ''",
                                 "from": {
-                                    "key_code": "home",  
+                                    "key_code": "home",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift"
@@ -1411,149 +1414,147 @@
                                     {
                                         "key_code": "non_us_pound",
                                         "modifiers": [
-                                          "left_shift"
+                                            "left_shift"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "non_us_pound",
                                         "modifiers": [
-                                          "left_shift"
-                                        ]     
-                                      },
-                                      {
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
                                         "key_code": "left_arrow"
-                                      }                                         
+                                    }
                                 ],
                                 "type": "basic"
                             }
                         ]
-                    },                             
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "PageUp plus Shift --> \"\"",
                                 "from": {
-                                    "key_code": "page_up",  
+                                    "key_code": "page_up",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift"
                                         ]
                                     }
-                                },   
+                                },
                                 "to": [
                                     {
                                         "key_code": "2",
                                         "modifiers": [
-                                          "left_shift"
+                                            "left_shift"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "2",
                                         "modifiers": [
-                                          "left_shift"
-                                        ]     
-                                      },
-                                      {
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
                                         "key_code": "left_arrow"
-                                      }                                         
+                                    }
                                 ],
                                 "type": "basic"
                             }
                         ]
-                    },    
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "PageDown plus Shift --> »",
                                 "from": {
-                                    "key_code": "page_down",  
+                                    "key_code": "page_down",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift"
                                         ]
                                     }
-                                },   
+                                },
                                 "to": [
                                     {
                                         "key_code": "q",
                                         "modifiers": [
-                                          "left_shift",
-                                          "left_option"
+                                            "left_shift",
+                                            "left_option"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "q",
                                         "modifiers": [
-                                          "left_option"   
-                                        ]     
-                                      },
-                                      {
+                                            "left_option"
+                                        ]
+                                    },
+                                    {
                                         "key_code": "left_arrow"
-                                      }                                         
+                                    }
                                 ],
                                 "type": "basic"
                             }
                         ]
-                    },                                  
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "Home --> ()",
                                 "from": {
-                                    "key_code": "home",  
+                                    "key_code": "home",
                                     "modifiers": {
-                                        "optional": [                                            
-                                        ]
+                                        "optional": []
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "8",
                                         "modifiers": [
-                                          "left_shift"
+                                            "left_shift"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "9",
                                         "modifiers": [
-                                          "left_shift"
+                                            "left_shift"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "left_arrow"
-                                      }                                         
+                                    }
                                 ],
                                 "type": "basic"
                             }
                         ]
-                    },                    
+                    },
                     {
                         "manipulators": [
                             {
                                 "description": "PageUp --> []",
                                 "from": {
-                                    "key_code": "page_up",  
+                                    "key_code": "page_up",
                                     "modifiers": {
-                                        "optional": [
-                                        ]
+                                        "optional": []
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "5",
                                         "modifiers": [
-                                          "left_option"
+                                            "left_option"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "6",
                                         "modifiers": [
-                                          "left_option"
+                                            "left_option"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "left_arrow"
-                                      }                                         
+                                    }
                                 ],
                                 "type": "basic"
                             }
@@ -1564,28 +1565,27 @@
                             {
                                 "description": "PageDown --> {}",
                                 "from": {
-                                    "key_code": "page_down",  
+                                    "key_code": "page_down",
                                     "modifiers": {
-                                        "optional": [
-                                        ]
+                                        "optional": []
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "8",
                                         "modifiers": [
-                                          "left_option"
+                                            "left_option"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "9",
                                         "modifiers": [
-                                          "left_option"
+                                            "left_option"
                                         ]
-                                      },
-                                      {
+                                    },
+                                    {
                                         "key_code": "left_arrow"
-                                      }                                         
+                                    }
                                 ],
                                 "type": "basic"
                             }
@@ -1596,13 +1596,13 @@
                             {
                                 "description": "1 plus left shift plus left ctrl --> launch Chrome",
                                 "from": {
-                                    "key_code": "1",  
+                                    "key_code": "1",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
                                             "left_control"
                                         ]
-                                    } 
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1618,13 +1618,13 @@
                             {
                                 "description": "2 plus left shift plus left ctrl --> launch Google Chats",
                                 "from": {
-                                    "key_code": "2",  
+                                    "key_code": "2",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
                                             "left_control"
                                         ]
-                                    } 
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1640,13 +1640,13 @@
                             {
                                 "description": "3 plus left shift plus left ctrl --> launch Telegram",
                                 "from": {
-                                    "key_code": "3",  
+                                    "key_code": "3",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
                                             "left_control"
                                         ]
-                                    } 
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1662,13 +1662,13 @@
                             {
                                 "description": "4 plus left shift plus left ctrl --> launch Libre Office",
                                 "from": {
-                                    "key_code": "4",  
+                                    "key_code": "4",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
                                             "left_control"
                                         ]
-                                    } 
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1684,13 +1684,13 @@
                             {
                                 "description": "Home plus left shift plus left ctrl --> launch Spotify",
                                 "from": {
-                                    "key_code": "home",  
+                                    "key_code": "home",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
                                             "left_control"
                                         ]
-                                    } 
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1706,13 +1706,13 @@
                             {
                                 "description": "PageDown plus left shift plus left ctrl --> launch Terminal",
                                 "from": {
-                                    "key_code": "page_up",  
+                                    "key_code": "page_up",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
                                             "left_control"
                                         ]
-                                    } 
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1728,13 +1728,13 @@
                             {
                                 "description": "PageUp plus left shift plus left ctrl --> launch VSC",
                                 "from": {
-                                    "key_code": "page_down",  
+                                    "key_code": "page_down",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
                                             "left_control"
                                         ]
-                                    } 
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1745,309 +1745,309 @@
                             }
                         ]
                     },
-                    {   "description": "capslock plus tab toggles layer2 --> on",
+                    {
+                        "description": "capslock plus tab toggles layer2 --> on",
                         "manipulators": [
-                          {
-                            "type": "basic",
-                            "conditions":
-                            [
-                                {
-                                    "name": "caps_lock pressed",
-                                    "type": "variable_if",
-                                    "value": 1
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "caps_lock pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                {
-                                    "name": "layer2",
-                                    "type": "variable_if",
-                                    "value": 0
-                                }                                    
-                            ],
-                            "from": {
-                              "key_code": "tab",
-                              "modifiers": {
-                                "optional": [
-                                  "any"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "set_variable": {
-                                  "name": "layer2",
-                                  "value": 1
-                                }
-                              }
-                            ],
-                            "to_after_key_up": [
-                              {
-                                "set_variable": {
-                                  "name": "layer2",
-                                  "value": 1
-                                }
-                              }
-                            ]
-                          }
-                        ]                        
-                      }, 
-                      { "description": "capslock plus tab toggles Layer2 --> off",
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "layer2",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "layer2",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "capslock plus tab toggles Layer2 --> off",
                         "manipulators": [
-                          {
-                            "type": "basic",
-                            "conditions":
-                            [
-                                {
-                                    "name": "caps_lock pressed",
-                                    "type": "variable_if",
-                                    "value": 1
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "caps_lock pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                {
-                                    "name": "layer2",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }                            
-                            ],
-                            "from": {
-                              "key_code": "tab",
-                              "modifiers": {
-                                "optional": [
-                                  "any"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "set_variable": {
-                                  "name": "layer2",
-                                  "value": 0
-                                }
-                              }
-                            ]                            
-                          }
-                        ]                        
-                      },  
-                      {
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "layer2",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: [ as printed on key",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                              "key_code": "open_bracket"                             
-                            },
-                            "to": [
-                              {
-                                "key_code": "5",
-                                "modifiers":[
-                                    "left_option"
-                                ]
-                              }
-                            ]
-                          }
-                        ]                       
-                      },  
-                      {
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: [ as printed on key",
+                                "from": {
+                                    "key_code": "open_bracket"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: ] as printed on key",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                              "key_code": "close_bracket",
-                              "modifiers": {
-                                "optional": [
-                                  "any"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "key_code": "6",
-                                "modifiers":[
-                                    "left_option"
-                                ]
-                              }
-                            ]
-                          }
-                        ]                       
-                      },  
-                      {
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: ] as printed on key",
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "6",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: { as printed on key",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                              "key_code": "open_bracket",
-                              "modifiers": {
-                                "mandatory": [
-                                  "left_shift"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "key_code": "7",
-                                "modifiers":[
-                                    "left_option"                                    
-                                ]
-                              }
-                            ]
-                          }
-                        ]                       
-                      },
-                      {
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: { as printed on key",
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: } as printed on key BROKEN",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                                "key_code": "close_bracket",
-                                "modifiers": {
-                                  "mandatory": [
-                                    "left_shift"
-                                  ]
-                                }
-                              },
-                              "to": [
-                                {
-                                  "key_code": "9",
-                                  "modifiers":[
-                                      "left_option"                                      
-                                  ]
-                                }
-                              ] 
-                          }
-                        ]                       
-                      },
-                      {
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: } as printed on key BROKEN",
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "9",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: y as printed on key",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                              "key_code": "z"
-                            },
-                            "to": [
-                              {
-                                "key_code": "y"  
-                              }
-                            ]
-                          }
-                        ]                       
-                      },                    
-                      {
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: y as printed on key",
+                                "from": {
+                                    "key_code": "z"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "y"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: z as printed on key",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                              "key_code": "y"
-                            },
-                            "to": [
-                              {
-                                "key_code": "z"  
-                              }
-                            ]
-                          }
-                        ]                       
-                      },                   
-                      {
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: z as printed on key",
+                                "from": {
+                                    "key_code": "y"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "z"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: \\ as printed on key",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                              "key_code": "non_us_backslash"                              
-                            },
-                            "to": [
-                              {
-                                "key_code": "7",
-                                "modifiers":[
-                                    "left_option",
-                                    "left_shift"
-                                ]
-                              }
-                            ]
-                          }
-                        ]                       
-                      },
-                      {
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: \\ as printed on key",
+                                "from": {
+                                    "key_code": "non_us_backslash"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": [
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "manipulators": [
-                          {
-                            "description": "Layer2: | as printed on key",
-                            "type": "basic",
-                            "conditions": [
-                              {
-                                "name": "layer2",
-                                "type": "variable_if",
-                                "value": 1
-                              }
-                            ],
-                            "from": {
-                              "key_code": "non_us_backslash",
-                              "modifiers": {
-                                "mandatory": [
-                                  "left_shift"
-                                ]
-                              }
-                            },
-                            "to": [
-                              {
-                                "key_code": "7",
-                                "modifiers":[
-                                    "left_option"                                    
-                                ]
-                              }
-                            ]
-                          }
-                        ]                       
-                      }  
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "layer2",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Layer2: | as printed on key",
+                                "from": {
+                                    "key_code": "non_us_backslash",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
                 ]
             },
             "devices": [
@@ -2073,7 +2073,7 @@
                         "product_id": 833,
                         "vendor_id": 1452
                     },
-                    "ignore": true, 
+                    "ignore": true,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 }
